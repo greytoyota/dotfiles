@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/editorconfig-vim"]
 	path = .vim/bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule ".vim/fonts/powerline-fonts"]
+	path = .vim/fonts/powerline-fonts
+	url = https://github.com/Lokaltog/powerline-fonts.git
