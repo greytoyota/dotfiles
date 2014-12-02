@@ -113,7 +113,6 @@ if !exists(":DiffOrig")
 endif
 colorscheme desert
 
-set autochdir
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
@@ -158,3 +157,4 @@ let g:netrw_altv = 1
 
 " Default to tree mode
 let g:netrw_liststyle=3
+set autochdir
