@@ -1,4 +1,5 @@
 execute pathogen#infect()
+
 syntax enable
 " An example for a vimrc file.
 "
@@ -35,6 +36,11 @@ set ruler		" show the cursor position all the time
 set number
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
+set ignorecase
+set smartcase
+set hidden      " allows buffer to be hidden when modified
+set laststatus=2 "always show the status bar
+set mousehide
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
@@ -59,6 +65,11 @@ endif
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
+  " auto-reload .vimrc whenever it is updated
+  augroup myvimrchooks
+    au!
+    autocmd bufwritepost .vimrc source ~/.vimrc
+  augroup END
 
   " Enable file type detection.
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
@@ -108,6 +119,7 @@ nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
+nmap <space> :
 map <C-n> :NERDTreeToggle<CR>
 imap jk <ESC>
 
@@ -115,3 +127,34 @@ imap jk <ESC>
 let g:airline_enable_syntastic = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" alternative to NERDTree
+" " Toggle Vexplore with Ctrl-E
+function! ToggleVExplorer()
+  if exists("t:expl_buf_num")
+      let expl_win_num = bufwinnr(t:expl_buf_num)
+      if expl_win_num != -1
+          let cur_win_nr = winnr()
+          exec expl_win_num . 'wincmd w'
+          close
+          exec cur_win_nr . 'wincmd w'
+          unlet t:expl_buf_num
+      else
+          unlet t:expl_buf_num
+      endif
+  else
+      exec '1wincmd w'
+      Vexplore
+      let t:expl_buf_num = bufnr("%")
+  endif
+endfunction
+map <silent> <C-E> :call ToggleVExplorer()<CR>
+
+" Hit enter in the file browser to open the selected
+" file with :vsplit to the right of the browser.
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+
+" Default to tree mode
+let g:netrw_liststyle=3
