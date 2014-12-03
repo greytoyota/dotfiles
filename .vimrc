@@ -61,10 +61,12 @@ endif
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
   set hlsearch
+  set guioptions-=T
 endif
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
+    autocmd VimEnter * if !argc() | :call ToggleVExplorer() | endif
   " auto-reload .vimrc whenever it is updated
   augroup myvimrchooks
     au!
@@ -102,7 +104,16 @@ else
 
 endif " has("autocmd")
 
-set guifont=Source\ Code\ Pro\ for\ Powerline:h13
+if has("unix")
+    let s:uname = substitute(system("uname"), '\n', '', '')
+    if !v:shell_error
+        if s:uname == "Darwin"
+            set guifont=Source\ Code\ Pro\ for\ Powerline:h13
+        elseif s:uname == "Linux"
+            set guifont=Meslo\ LG\ L\ DZ\ for\ Powerline\ 13
+        endif
+    endif
+endif
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
