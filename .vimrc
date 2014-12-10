@@ -132,7 +132,9 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 nmap <space> :
-map <C-n> :NERDTreeToggle<CR>
+" Use CTRL-N to move forward buffer, CTRL-B to move back.
+map <C-n> :bn<CR>
+map <C-b> :bp<CR>
 imap jk <ESC>
 
 " vim-airline settings
