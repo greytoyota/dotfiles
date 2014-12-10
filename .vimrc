@@ -62,6 +62,8 @@ endif
 if &t_Co > 2 || has("gui_running")
   set hlsearch
   set guioptions-=T
+  set guioptions-=r
+  set guioptions-=L
 endif
 
 " Only do this part when compiled with support for autocommands.
@@ -108,7 +110,7 @@ if has("unix")
     let s:uname = substitute(system("uname"), '\n', '', '')
     if !v:shell_error
         if s:uname == "Darwin"
-            set guifont=Source\ Code\ Pro\ for\ Powerline:h13
+            set guifont=Source\ Code\ Pro\ for\ Powerline:h14
         elseif s:uname == "Linux"
             set guifont=Meslo\ LG\ L\ DZ\ for\ Powerline\ 13
         endif
