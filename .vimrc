@@ -1,16 +1,6 @@
 execute pathogen#infect()
 
 syntax enable
-" An example for a vimrc file.
-"
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2008 Dec 17
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -41,6 +31,7 @@ set smartcase
 set hidden      " allows buffer to be hidden when modified
 set laststatus=2 "always show the status bar
 set mousehide
+set splitbelow splitright
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
@@ -68,7 +59,6 @@ endif
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
-    autocmd VimEnter * if !argc() | :call ToggleVExplorer() | endif
   " auto-reload .vimrc whenever it is updated
   augroup myvimrchooks
     au!
@@ -142,6 +132,11 @@ let g:airline_enable_syntastic = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+" syntastic settings
+let g:syntastic_scss_checkers = ['scss_lint']
+let g:syntastic_haml_checkers = ['haml_lint']
+let g:syntastic_ruby_checkers = ['rubocop', 'ruby-lint']
 
 " alternative to NERDTree
 " " Toggle Vexplore with Ctrl-E
