@@ -1,0 +1,12 @@
+#!/bin/sh
+
+APPHOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home"
+UCBCLASSES="/Users/Joel/.emacs.d/gjdb/share/gjdb/lib/gjdb.jar"
+JDICLASSES="/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/tools.jar"
+
+JAVA=${APPHOME}/bin/java
+
+CLASSPATH=".:${UCBCLASSES}:${JDICLASSES:+:${JDICLASSES}}${CLASSPATH:+:${CLASSPATH}}"
+export CLASSPATH
+
+exec ${JAVA} -Djava.compiler -Dapplication.home=${APPHOME} ucb.gjdb.GJDB $*

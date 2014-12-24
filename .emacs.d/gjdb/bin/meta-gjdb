@@ -1,0 +1,34 @@
+#!/bin/sh
+
+APPHOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home"
+METAGJDBCLASSES="/Users/Joel/.emacs.d/gjdb/share/gjdb/lib/gjdb.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/tools.jar"
+JAVA=${APPHOME}/bin/java
+
+SRCDIR="/Users/Joel/gjdb-6.2.6"
+GJDBCLASSES="/Users/Joel/gjdb-6.2.6/src/gjdb.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/tools.jar"
+
+args=
+optf=
+classes=
+while [ $# -gt 0 ]; do
+    case "$1" in
+    -f)              optf=-f;; 
+    -classpath|-cp)  classes="$2"; shift;;
+    -sourcepath|-sp) SRCDIR="$2"; shift;;
+    -build)          GJDBCLASSES="$2/gjdb.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/lib/tools.jar"; shift;;
+    *)               args="$args $1";;
+    esac
+    shift
+done
+if [ "X$classes" = "X" ]; then
+    classes=${CLASSPATH:+"-classpath $CLASSPATH"}
+fi
+
+SRCS="${SRCDIR}/src"
+${JAVA} -classpath "$METAGJDBCLASSES" -Djava.compiler \
+        -Dapplication.home=${APPHOME} \
+    ucb.gjdb.GJDB -classpath "$GJDBCLASSES" -sourcepath "$SRCS" \
+         -prompt "(meta)" $optf \
+         -Djava.compiler -Dapplication.home=${APPHOME} \
+      ucb.gjdb.GJDB $classes $args
+
