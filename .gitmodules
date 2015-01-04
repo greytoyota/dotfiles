@@ -25,3 +25,6 @@
 [submodule ".vim/bundle/vim-css-color"]
 	path = .vim/bundle/vim-css-color
 	url = https://github.com/ap/vim-css-color
+[submodule ".emacs.d/ess"]
+    path = .emacs.d/ess
+    url = https://github.com/emacs-ess/ESS
