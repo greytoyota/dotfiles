@@ -24,3 +24,13 @@ indent_size = 2
 [*.rb]
 indent_style = space
 indent_size = 2
+
+# 2 space indentation for Sass
+[*.scss]
+indent_style = space
+indent_size = 2
+
+# 4 space indentation for Java
+[*.java]
+indent_style = space
+indent_size = 4
