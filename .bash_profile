@@ -4,6 +4,7 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
 export JRE_HOME=/Library/Java/JavaVirtualMachines/jre1.8.0_05.jre/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
 
+alias la="ls -a"
 alias clr="tput clear"
 
 ssh-add ~/.ssh/id_rsa
