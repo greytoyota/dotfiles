@@ -29,7 +29,7 @@ set incsearch		" do incremental searching
 set ignorecase
 set smartcase
 set hidden      " allows buffer to be hidden when modified
-set laststatus=2 "always show the status bar
+set laststatus=2 " always show the status bar
 set mousehide
 set splitbelow splitright
 
@@ -100,6 +100,7 @@ else
 endif " has("autocmd")
 
 if has("unix")
+    " different GUI fonts for Mac and Linux
     let s:uname = substitute(system("uname"), '\n', '', '')
     if !v:shell_error
         if s:uname == "Darwin"
