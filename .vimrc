@@ -130,6 +130,8 @@ nmap <space> :
 map <C-n> :bn<CR>
 map <C-b> :bp<CR>
 imap jk <ESC>
+" Go to first matching tag
+map tt <c-]>
 
 " vim-airline settings
 let g:airline_enable_syntastic = 1
