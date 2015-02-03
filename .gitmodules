@@ -28,3 +28,6 @@
 [submodule ".emacs.d/ess"]
     path = .emacs.d/ess
     url = https://github.com/emacs-ess/ESS
+[submodule ".vim/bundle/surround.vim"]
+    path = .vim/bundle/surround.vim
+    url = https://github.com/tpope/vim-surround.git
