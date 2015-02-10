@@ -133,6 +133,10 @@ imap jk <ESC>
 " Go to first matching tag
 map tt <c-]>
 
+if &listchars ==# 'eol:$'
+  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+endif
+
 " vim-airline settings
 let g:airline_enable_syntastic = 1
 let g:airline#extensions#tabline#enabled = 1
