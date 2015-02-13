@@ -34,9 +34,6 @@
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule ".vim/bundle/nerdcommenter"]
-	path = .vim/bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule ".vim/fonts/powerline-fonts"]
 	path = .vim/fonts/powerline-fonts
 	url = https://github.com/Lokaltog/powerline-fonts.git
