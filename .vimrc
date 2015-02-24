@@ -126,6 +126,9 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 nmap <space> :
+" Treat lines longer than window width as multiple lines
+nnoremap j gj
+nnoremap k gk
 " Use CTRL-N to move forward buffer, CTRL-B to move back.
 map <C-n> :bn<CR>
 map <C-b> :bp<CR>
