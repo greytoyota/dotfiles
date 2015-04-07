@@ -157,4 +157,7 @@ let g:rails_projections = {
     \ "config/routes.rb": { "command": "routes" },
     \ "Gemfile": { "command": "gemfile" },
     \ "db/schema.rb": { "command": "schema" },
-    \ "db/seeds.rb": { "command": "seeds" }}
+    \ "db/seeds.rb": { "command": "seeds" },
+    \ "features/*.feature": { "command": "feature" },
+    \ "features/step_definitions/*.rb": { "command": "step" },
+    \ "features/support/*.rb": { "command": "support" }}
