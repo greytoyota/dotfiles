@@ -1,42 +1,45 @@
+[submodule ".vim/bundle/ctrlp.vim"]
+    path = .vim/bundle/ctrlp.vim
+    url = https:/hub.com/kien/ctrlp.vim
 [submodule ".vim/bundle/commentary.vim"]
     path = .vim/bundle/commentary.vim
-    url = https://github.com/tpope/vim-commentary
+    url = https:/hub.com/tpope/vim-commentary
 [submodule ".vim/bundle/endwise.vim"]
     path = .vim/bundle/endwise.vim
-    url = https://github.com/tpope/vim-endwise
+    url = https:/hub.com/tpope/vim-endwise
 [submodule ".vim/bundle/vinegar.vim"]
     path = .vim/bundle/vinegar.vim
-    url = https://github.com/tpope/vim-vinegar
+    url = https:/hub.com/tpope/vim-vinegar
 [submodule ".vim/bundle/fugitive.vim"]
-	path = .vim/bundle/fugitive.vim
-	url = https://github.com/tpope/vim-fugitive.git
+    path = .vim/bundle/fugitive.vim
+    url = https:/hub.com/tpope/vim-fugitive
 [submodule ".vim/bundle/surround.vim"]
     path = .vim/bundle/surround.vim
-    url = https://github.com/tpope/vim-surround.git
+    url = https:/hub.com/tpope/vim-surround
 [submodule ".vim/bundle/rails.vim"]
-	path = .vim/bundle/rails.vim
-	url = https://github.com/tpope/vim-rails.git
+    path = .vim/bundle/rails.vim
+    url = https:/hub.com/tpope/vim-rails
 [submodule ".vim/bundle/bundler.vim"]
     path = .vim/bundle/bundler.vim
-    url = https://github.com/tpope/vim-bundler.git
+    url = https:/hub.com/tpope/vim-bundler
 [submodule ".vim/bundle/csv.vim"]
     path = .vim/bundle/csv.vim
-    url = https://github.com/chrisbra/csv.vim.git
+    url = https:/hub.com/chrisbra/csv.vim
 [submodule ".vim/bundle/vim-css-color"]
-	path = .vim/bundle/vim-css-color
-	url = https://github.com/ap/vim-css-color
+    path = .vim/bundle/vim-css-color
+    url = https:/hub.com/ap/vim-css-color
 [submodule ".vim/bundle/vim-airline"]
-	path = .vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline.git
+    path = .vim/bundle/vim-airline
+    url = https:/hub.com/bling/vim-airline
 [submodule ".vim/bundle/editorconfig-vim"]
-	path = .vim/bundle/editorconfig-vim
-	url = https://github.com/editorconfig/editorconfig-vim.git
+    path = .vim/bundle/editorconfig-vim
+    url = https:/hub.com/editorconfig/editorconfig-vim
 [submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
+    path = .vim/bundle/syntastic
+    url = https:/hub.com/scrooloose/syntastic
 [submodule ".vim/fonts/powerline-fonts"]
-	path = .vim/fonts/powerline-fonts
-	url = https://github.com/Lokaltog/powerline-fonts.git
+    path = .vim/fonts/powerline-fonts
+    url = https:/hub.com/Lokaltog/powerline-fonts
 [submodule ".emacs.d/ess"]
     path = .emacs.d/ess
-    url = https://github.com/emacs-ess/ESS
+    url = https:/hub.com/emacs-ess/ESS
