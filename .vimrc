@@ -156,8 +156,8 @@ let g:syntastic_ruby_checkers = ['rubocop', 'ruby-lint']
 let g:rails_projections = {
     \ "config/routes.rb": { "command": "routes" },
     \ "Gemfile": { "command": "gemfile" },
-    \ "db/schema.rb": { "command": "schema" },
     \ "db/seeds.rb": { "command": "seeds" },
+    \ "spec/factories/*.rb": { "command": "factory" },
     \ "features/*.feature": { "command": "feature" },
     \ "features/step_definitions/*.rb": { "command": "step" },
     \ "features/support/*.rb": { "command": "support" }}
