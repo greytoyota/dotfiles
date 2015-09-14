@@ -119,7 +119,7 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
               \ | wincmd p | diffthis
 endif
-colorscheme desert
+colorscheme wombat
 
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>

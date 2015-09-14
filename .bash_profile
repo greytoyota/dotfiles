@@ -2,6 +2,7 @@ source ~/.profile
 source ~/.comp_specific
 
 alias la="ls -a"
+alias ls="ls -F"
 alias clr="tput clear"
 
 ssh-add ~/.ssh/id_rsa

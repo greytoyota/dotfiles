@@ -43,3 +43,6 @@
 [submodule ".emacs.d/ess"]
     path = .emacs.d/ess
     url = https://github.com/emacs-ess/ESS
+[submodule ".bash/git-aware-prompt"]
+    path = .bash/git-aware-prompt
+    url = https://github.com/jimeh/git-aware-prompt.git
