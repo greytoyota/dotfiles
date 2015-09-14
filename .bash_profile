@@ -1,12 +1,15 @@
 source ~/.profile
 source ~/.comp_specific
 
+export GITAWAREPROMPT=~/.bash/git-aware-prompt
+source "${GITAWAREPROMPT}/main.sh"
+
 alias la="ls -a"
 alias ls="ls -F"
 alias clr="tput clear"
 
 ssh-add ~/.ssh/id_rsa
-PS1='\W:$ '
+PS1="\W: \[$bldgrn\]\$git_branch\[$txtylw\]\$git_dirty\[$txtrst\]\$ "
 
 set -o ignoreeof
 shopt -s extglob
