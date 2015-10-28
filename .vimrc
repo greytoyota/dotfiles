@@ -147,10 +147,20 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-" syntastic settings
+" use CTRL-s to run syntax/style check
+nmap <C-s> :SyntasticCheck<CR>
+" Syntastic settings
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_check_on_wq = 0 " don't run on save if quitting
+let g:syntastic_check_on_open = 1
 let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_haml_checkers = ['haml_lint']
 let g:syntastic_ruby_checkers = ['rubocop', 'ruby-lint']
+let g:syntastic_mode_map = {
+        \ "mode": "active",
+        \ "active_filetypes": ["ruby", "python"],
+        \ "passive_filetypes": ["java"] }
 
 " custom Rails.vim commands
 let g:rails_projections = {
